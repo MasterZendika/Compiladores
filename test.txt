@@ -1,0 +1,57 @@
+
+### 3. **test_description.txt**
+Este archivo debe incluir una descripción detallada de los casos de prueba que has realizado. Aquí hay un ejemplo de cómo organizar este archivo:
+
+```txt
+# Descripción de las pruebas realizadas
+
+## 1. Stack (LIFO)
+- **Prueba 1:** Insertar elementos en la pila (`push`) y verificar el orden al hacer `top` y `pop`.
+    - Entrada: 10, 20, 30
+    - Resultado esperado: `top()` retorna 30, luego `pop()` elimina 30, `top()` retorna 20.
+
+- **Prueba 2:** Intentar hacer `pop()` en una pila vacía.
+    - Entrada: Ninguna
+    - Resultado esperado: "Error: Stack is empty. Cannot pop."
+
+- **Prueba 3:** Verificar `top()` cuando la pila está vacía.
+    - Entrada: Ninguna
+    - Resultado esperado: Lanzar excepción: "Error: Stack is empty."
+
+- **Prueba 4:** Verificar si la pila está vacía usando `isEmpty()`.
+    - Entrada: Después de hacer `pop()`
+    - Resultado esperado: `isEmpty()` debe devolver `true` si la pila está vacía.
+
+## 2. Queue (FIFO)
+- **Prueba 1:** Insertar elementos en la cola (`enqueue`) y verificar el orden al hacer `front()` y `dequeue()`.
+    - Entrada: 10, 20, 30
+    - Resultado esperado: `front()` retorna 10, luego `dequeue()` elimina 10, `front()` retorna 20.
+
+- **Prueba 2:** Intentar hacer `dequeue()` en una cola vacía.
+    - Entrada: Ninguna
+    - Resultado esperado: "Error: Queue is empty. Cannot dequeue."
+
+- **Prueba 3:** Verificar `front()` cuando la cola está vacía.
+    - Entrada: Ninguna
+    - Resultado esperado: Lanzar excepción: "Error: Queue is empty."
+
+- **Prueba 4:** Verificar si la cola está vacía usando `isEmpty()`.
+    - Entrada: Después de hacer `dequeue()`
+    - Resultado esperado: `isEmpty()` debe devolver `true` si la cola está vacía.
+
+## 3. Hash Table
+- **Prueba 1:** Insertar y recuperar valores usando claves en la tabla hash.
+    - Entrada: Claves `apple` y `banana` con valores 100 y 200, respectivamente.
+    - Resultado esperado: `get("apple")` debe devolver 100 y `get("banana")` debe devolver 200.
+
+- **Prueba 2:** Intentar eliminar una clave que no existe en la tabla hash.
+    - Entrada: Clave `cherry`
+    - Resultado esperado: "Error: Key not found. Cannot remove."
+
+- **Prueba 3:** Verificar la existencia de una clave usando `contains()`.
+    - Entrada: Clave `apple`
+    - Resultado esperado: `contains("apple")` debe devolver `true` si la clave está presente.
+
+## Conclusión
+
+Estas pruebas cubren los casos más comunes y de borde para asegurar que las estructuras de datos funcionen correctamente. Los errores se manejan mediante mensajes de error apropiados y excepciones donde corresponde.
